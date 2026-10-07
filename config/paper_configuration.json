@@ -1,0 +1,29 @@
+{
+  "estimand": "Target-population causal net benefit at tau = 14 days",
+  "case_analysis": {
+    "source_period": "2014-2019",
+    "target_period": "2020-2022",
+    "outer_folds": 5,
+    "super_learner_inner_folds": 2,
+    "censor_survival_floor": 0.02,
+    "candidate_event_learners": ["linear_cox", "rsf", "gbsa"],
+    "rsf_trees": 250,
+    "gbsa_trees": 150,
+    "ipcw_brier_times_days": [3, 7, 10, 14],
+    "bootstrap_replicates": 500,
+    "raw_treatment_coding": {
+      "A=1": "norepinephrine",
+      "A=0": "phenylephrine"
+    },
+    "reported_contrast": "phenylephrine minus norepinephrine"
+  },
+  "simulation": {
+    "n_target": 400,
+    "source_sizes": [1200, 2400, 3600, 4000],
+    "monte_carlo_repetitions": 500,
+    "outer_folds": 5,
+    "time_grid_intervals": 128,
+    "density_ratio_method": "linear calibration weighting with ridge penalty 0.05 and cap 8",
+    "overlap_strengths": [0.5, 1.0, 1.5]
+  }
+}

@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying manuscript."
+title: "Transported causal net benefit with survival data"
+type: software
+version: 0.1.0
+date-released: 2026-10-07
+abstract: "Cross-fitted one-step estimation of target-population causal net benefit with right-censored survival outcomes."

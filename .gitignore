@@ -1,0 +1,23 @@
+# Credentialed and derived MIMIC-IV data
+data/mimic_temporal/*
+!data/mimic_temporal/README.md
+
+# Derived results and caches
+results/*
+!results/.gitkeep
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local environments and editor files
+.venv/
+.env
+.vscode/
+.idea/
+
+# Logs and operating-system artefacts
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
